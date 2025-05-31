@@ -7,8 +7,8 @@ export default {
     external: [
         "react",
         "react-native",
-        "@react-native-async-storage/async-storage"
-        // (in seguito, aggiungeremo altri peerDependencies per Google Fonts se serve)
+        "@react-native-async-storage/async-storage",
+        "deepmerge"
     ],
     output: [
         {
@@ -23,8 +23,8 @@ export default {
         }
     ],
     plugins: [
-        resolve({ extensions: [".js", ".jsx", ".ts", ".tsx"] }),
+        resolve({extensions: [".js", ".jsx", ".ts", ".tsx"]}),
         commonjs(),
-        typescript({ tsconfig: "./tsconfig.json" })
+        typescript({tsconfig: "./tsconfig.json"})
     ]
 };
