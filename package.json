@@ -1,6 +1,6 @@
 {
   "name": "@matteogiuditta/sbu-thematic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A professional React Native theming toolkit with Sbu-prefixed wrappers and Google Fonts integration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
