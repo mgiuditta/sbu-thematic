@@ -3,7 +3,7 @@
 import React from "react";
 import { Text, TextProps, TextStyle } from "react-native";
 import { useTheme } from "../hooks/useTheme";
-import { Typography } from "../types";
+import { ColorKey, TypographyKey } from "../types";
 
 /**
  * SbuThemedTextProps extends TextProps and adds:
@@ -12,7 +12,7 @@ import { Typography } from "../types";
  *  - margin, marginHorizontal, marginVertical, textAlign
  */
 export interface SbuThemedTextProps extends TextProps {
-    variant?: keyof Typography;
+    variant?: TypographyKey;
     color?: string;
     margin?: number;
     marginHorizontal?: number;
@@ -31,7 +31,7 @@ export const SbuThemedText: React.FC<SbuThemedTextProps> = props => {
     const { theme } = useTheme();
 
     const {
-        variant = "body",
+        variant = TypographyKey.Body,
         color,
         margin,
         marginHorizontal,
@@ -42,8 +42,8 @@ export const SbuThemedText: React.FC<SbuThemedTextProps> = props => {
     } = props;
 
     const computedStyle: TextStyle = {
-        fontSize: theme.typography[variant] ?? theme.typography.body,
-        color: color ?? theme.colors.text
+        fontSize: theme.typography[variant] ?? theme.typography[TypographyKey.Body],
+        color: color ?? theme.colors[ColorKey.Text]
     };
 
     if (margin !== undefined) {

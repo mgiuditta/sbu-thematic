@@ -9,6 +9,7 @@ import {
     FlexStyle
 } from "react-native";
 import { useTheme } from "../hooks/useTheme";
+import { ColorKey } from "../types";
 
 /**
  * SbuThemedViewProps extends ViewProps but also adds common layout props:
@@ -58,7 +59,7 @@ export const SbuThemedView: React.FC<SbuThemedViewProps> = props => {
 
     // Start with backgroundColor from theme or override
     const computedStyle: ViewStyle = {
-        backgroundColor: backgroundColor ?? theme.colors.background
+        backgroundColor: backgroundColor ?? theme.colors[ColorKey.Background]
     };
 
     // Apply layout props if provided

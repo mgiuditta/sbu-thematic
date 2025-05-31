@@ -4,7 +4,7 @@ import { defaultLight } from "./defaultLight";
 import { defaultDark } from "./defaultDark";
 
 /**
- * builtInThemes collects all the available base themes.
+ * builtInThemes collects all base themes available by default.
  */
 export const builtInThemes: Record<string, any> = {
     light: defaultLight,

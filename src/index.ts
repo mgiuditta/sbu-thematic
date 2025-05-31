@@ -20,7 +20,10 @@ export type {
     ColorPalette,
     Typography,
     Spacing,
-    ThemeContextType
+    ThemeContextType,
+    ColorKey,
+    TypographyKey,
+    SpacingKey
 } from "./types";
 
 // Storage utilities (optional export)

@@ -12,7 +12,8 @@ const placeholderTheme: Theme = {
         secondary: "#000000",
         background: "#ffffff",
         text: "#000000",
-        border: "#cccccc"
+        border: "#cccccc",
+        accent: "#000000"
     },
     typography: {
         heading: 24,

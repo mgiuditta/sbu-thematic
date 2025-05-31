@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useEffect, useState, useCallback } from "react";
 import { ThemeContext } from "./ThemeContext";
-import { Theme, ThemeName } from "../types";
+import { Theme, ThemeName, ColorKey, TypographyKey, SpacingKey } from "../types";
 import { builtInThemes } from "../themes";
 import { getStoredThemeName, setStoredThemeName } from "../utils/storage";
 import merge from "deepmerge";
@@ -10,7 +10,11 @@ import merge from "deepmerge";
 interface ThemeProviderProps {
     /**
      * Allow passing partial overrides for any theme.
-     * Example: { light: { colors: { primary: "#ff0000" } }, custom: {...} }
+     * Example:
+     * {
+     *   light: { colors: { [ColorKey.Primary]: "#ff0000" } },
+     *   custom: { ... }
+     * }
      */
     customThemes?: Partial<Record<ThemeName, Partial<Theme>>>;
     /**
